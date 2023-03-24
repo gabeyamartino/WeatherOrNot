@@ -1,7 +1,9 @@
 const App = () => {
   return (
     <>
-      <div></div>
+      <div>
+        <button>Get the Weather</button>
+      </div>
     </>
   );
 };
