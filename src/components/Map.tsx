@@ -1,20 +1,26 @@
 import GoogleMapReact from 'google-map-react';
+import { stringify } from 'querystring';
 
-interface ChildComponentProps {
-  location: Location;
-}
 
-const Map: React.FC<ChildComponentProps> = ({location}) => (
+
+const Map = () => {
+
+  type TestObj =  {
+    name: string ,
+    greeting: string
+  }
+
+  const testing: TestObj = {
+    name: "Gabe",
+    greeting: "Hello"
+  }
+
+  return (
   <div className="min-h-full min-w-full">
     <div className="google-map">
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
-        defaultCenter={location}
-        defaultZoom={17}
-      >
-      </GoogleMapReact>
+    <div>`{testing.greeting}, {testing.name}`</div>
     </div>
   </div>
-)
+)}
 
 export default Map;
