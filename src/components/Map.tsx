@@ -12,7 +12,7 @@ const Map = () => {
 
   const testing: TestObj = {
     name: "Gabe",
-    greeting: "Hello"
+    greeting: "Hi"
   }
 
   return (
